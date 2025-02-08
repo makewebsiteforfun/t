@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/x-icon" href="./ads/top draft_page-0001.jpg">
+    <title>Pre-Order Notification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Company Logo -->
+    
+    <div class="floating-container w-full min-h-screen flex flex-col items-center justify-center">
+       
+        <!-- Main Content -->
+        <div class="floating-form">
+            <div class="logo-container">
+                <img src="./ads/dika studios horizontal version.png" alt="Company Logo">
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800">Be the First to Pre-Order!</h2>
+            <p class="text-gray-600 mt-2">Sign up with your email, and reserve your game!</p>
+             <!-- Video Section -->
+             <div class="mt-4 w-full flex justify-center">
+                <iframe 
+                    src="./ads/WhatsApp Video 2025-02-02 at 20.44.04_089102bf.mp4" 
+                    class="w-full max-w-[200px] aspect-[5/5] rounded-lg shadow-lg"
+                    allowfullscreen 
+                    controlslist="nodownload noplaybackrate ">
+                </iframe>
+            </div>
+            
+            <!-- Pre-Order Form -->
+            <span class="original-price">$54.99</span>
+            <span class="promo-price">$45.99</span> <p class="text-gray-600 mt-2">Special pre-ordering price limited time only!</p>
+            <form id="preOrderForm" action="https://formspree.io/f/xpwqrnwq" method="POST" class="mt-4"  >
+                <input type="email" id="email" name="email" placeholder="Enter your email" required 
+                    class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200">
+                    <br>
+                    <br>
+                <textarea id="preorder" name="preorder" rows="4" placeholder="Write your preorder details here..." required></textarea>
+                <br>
+                <br>
+                <button type="button" class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="0" max="99999" />
+                <button type="button" class="quantity-btn" onclick="increaseQuantity()">+</button>
+                <button type="submit" class="mt-3 w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+                    Notify Me
+                </button>
+            </form>
+           
+            
+            <p id="message" class="hidden text-green-600 mt-3">Thank you!🎉🥳 We'll notify you soon.</p>
+        </div>
+        
+      
+    </div>
+    
+<script src="script.js"></script>
+</html>

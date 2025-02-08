@@ -1,0 +1,133 @@
+body {
+    background-image: url('./ads/top\ draft_page-0001.jpg');
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 200vh; /* Ensures full height */
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.floating-container {
+   /* position: relative;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 5px;
+}
+
+@media (min-width: 768px) {
+    .floating-container {
+       
+        flex-direction: row;
+    }
+}
+
+.floating-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 10px;
+   
+}
+
+@media (max-width: 1024px) {
+    body {
+        background-size: contain;
+    }
+    .floating-container {
+        flex-direction: column;
+    }
+    .floating-form {
+        width: 95%;
+    }
+}
+
+
+
+textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 50px;
+  }
+  .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.2rem;
+  }
+
+  .promo-price {
+    color: #960707; /* Green color for promotion */
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+
+  
+
+  input[type="number"] {
+    width: 55px;
+    padding: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .quantity-controls {
+    display: flex;
+    gap: 10px;
+  }
+
+  .quantity-btn {
+    padding: 5px;
+    background-color: #960707;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .quantity-btn:hover {
+    background-color: #000601;
+  }
+  .promo-price:hover {
+    color: #000601;
+    
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.01px; /* Keeps the spacing minimal */
+}
+
+.logo-container img {
+    max-width: 80%; /* Allows it to fill the container */
+    max-height: 140px; /* Increased size for better visibility */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+    opacity: 0.95;
+}
